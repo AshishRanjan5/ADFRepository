@@ -1,0 +1,24 @@
+{
+	"name": "trigger2",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "Event Driven Trigger",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "BlobEventsTrigger",
+		"typeProperties": {
+			"blobPathBeginsWith": "/adfcontainer/blobs/",
+			"ignoreEmptyBlobs": true,
+			"scope": "/subscriptions/7b8df952-03c3-498e-bd7d-574f535a0ede/resourceGroups/LTIRG/providers/Microsoft.Storage/storageAccounts/ashishacc",
+			"events": [
+				"Microsoft.Storage.BlobCreated"
+			]
+		}
+	}
+}
